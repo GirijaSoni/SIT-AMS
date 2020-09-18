@@ -55,6 +55,7 @@ flutter:
      - images/SIT.png
      - images/girija.png
      - images/chart.png
+     - images/management.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

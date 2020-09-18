@@ -6,6 +6,7 @@ import 'package:sitams/studentlogin.dart';
 
 import 'addnewstudent.dart';
 import 'managementhomepage.dart';
+import 'managementlogin.dart';
 
 void main() {
   runApp(MyApp());
@@ -124,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   onPressed: (){Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => managementhomepage()),);
+                    MaterialPageRoute(builder: (context) => managementlogin()),);
                   },
                   child: Text("Management Login",style:TextStyle(color: Colors.white,fontSize: 20),),
                 ),),

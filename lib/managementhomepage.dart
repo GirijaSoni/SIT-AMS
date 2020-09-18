@@ -1,3 +1,6 @@
+
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
@@ -42,76 +45,112 @@ class managementhomepage extends StatelessWidget {
                           Text("Management Options", style: TextStyle(fontSize: 35,
                               fontWeight: FontWeight.bold,
                               color: Color(0xffc44c4f)),),),
+                          Padding(
+                            padding: EdgeInsets.only(top: 100, left: 10), child:
+                          Text("Student:", style: TextStyle(fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff665d5c)),),),
 
-                          Padding(padding: EdgeInsets.only(top: 80),
-                            child: GridView.count(crossAxisCount: 2,
+                          Padding(padding: EdgeInsets.only(top: 130),
+                            child: GridView.count(crossAxisCount: 3,
                               crossAxisSpacing: 5,
                               mainAxisSpacing: 10,
                               children: <Widget>[
 
-                                //    Padding(padding: EdgeInsets.only(right: 10,left: 10,top: 70,bottom: 10),child: Text("Hello,I'nnnm"),),
+                                //
+                                //Padding(padding: EdgeInsets.only(right: 10,left: 10,top: 70,bottom: 10),child: Text("Hello,I'nnnm"),),
                                 Padding(padding: EdgeInsets.only(left: 10),
                                   child: singleCard(
-                                      Text("Add Student", style: TextStyle(
+                                      Icon(Icons.add,size: 50,),
+                                      Text("Add ", style: TextStyle(
                                           color: Color(0xffc44c4f),
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold),
                                       )
                                   ),),
-                                Padding(padding: EdgeInsets.only(right: 10),
+                                Padding(padding: EdgeInsets.only(right: 0),
                                   child: singleCard(
-                                      Text("Add Teacher", style: TextStyle(
+                                      Icon(Icons.edit,size: 50,),
+                                      Text("Edit", style: TextStyle(
                                           color: Color(0xffc44c4f),
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold),
                                       )
                                   ),),
 
-                                Padding(padding: EdgeInsets.only(left: 10),
-                                  child: singleCard(
-                                      Text("Edit Student Profile",
+                                Padding(padding: EdgeInsets.only(right: 10),
+                                  child: singleCard(Icon(Icons.delete,size: 50,),
+                                      Text("Remove",
                                         style: TextStyle(
                                             color: Color(0xffc44c4f),
                                             fontSize: 13,
                                             fontWeight: FontWeight.bold),
                                       )
                                   ),),
-                                Padding(padding: EdgeInsets.only(right: 10),
-                                  child: singleCard(
-                                      Text("Delete Student", style: TextStyle(
-                                          color: Color(0xffc44c4f),
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.bold),
-                                      )
-                                  ),),
 
+
+
+                              ],
+                            ),),
+                          Padding(padding: EdgeInsets.only(top: 280),child: Divider(
+                              height: 64,
+                              thickness: 1.0,
+                              color: Color(0xff2b313d).withOpacity(0.1),
+                              //indent: 32,
+                              //endIndent: 32,
+
+                          ),),
+                          Padding(
+                            padding: EdgeInsets.only(top: 330, left: 10), child:
+                          Text("Staff:", style: TextStyle(fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff665d5c)),),),
+
+                          Padding(padding: EdgeInsets.only(top: 360),
+                            child: GridView.count(crossAxisCount: 3,
+                              crossAxisSpacing: 5,
+                              mainAxisSpacing: 10,
+                              children: <Widget>[
+
+                                //
+                                //Padding(padding: EdgeInsets.only(right: 10,left: 10,top: 70,bottom: 10),child: Text("Hello,I'nnnm"),),
                                 Padding(padding: EdgeInsets.only(left: 10),
-                                  child: singleCard(
-                                      Text("Diagnostic Lab", style: TextStyle(
-                                          color: Color(0xffc44c4f),
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.bold),
-                                      )
-                                  ),),
-
-                                Padding(padding: EdgeInsets.only(right: 10),
-                                  child: singleCard(
-                                      Text("Alternative Care", style: TextStyle(
+                                  child: singleCard(Icon(Icons.add,size: 50,),
+                                      Text("Add", style: TextStyle(
                                           color: Color(0xffc44c4f),
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold),
                                       )
                                   ),),
+                                Padding(padding: EdgeInsets.only(right: 0),
+                                  child: singleCard(Icon(Icons.edit,size: 50,),
+                                      Text("Edit", style: TextStyle(
+                                          color: Color(0xffc44c4f),
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold),
+                                      )
+                                  ),),
+
+                                Padding(padding: EdgeInsets.only(right: 10),
+                                  child: singleCard(Icon(Icons.delete,size: 50,),
+                                      Text("Remove",
+                                        style: TextStyle(
+                                            color: Color(0xffc44c4f),
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.bold),
+                                      )
+                                  ),),
+
+
 
                               ],
                             ),)
-
 
                         ],
                       ),
 
 
-                      height: 670,
+                      height: 560,
                       width: MediaQuery
                           .of(context)
                           .size
@@ -143,7 +182,7 @@ class managementhomepage extends StatelessWidget {
     );
   }
 
-  singleCard(Text text) {
+  singleCard(Icon icon, Text text) {
     //singleCard(Image image, Text text) {
       return Card(
         elevation: 10,
@@ -157,7 +196,8 @@ class managementhomepage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-
+              icon,
+              SizedBox(height: 10,),
               text
 
 
